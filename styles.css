@@ -311,13 +311,41 @@ ul {
 }
 
 @media (max-width: 639px) {
-  /* Keep the scroll hint from overlapping the stats block on small screens. */
+  /*
+   * Avoid overlap: centered hero + absolutely positioned scroll cue collides with tall
+   * stacked stats. Use a column flex layout and keep the scroll hint in normal flow,
+   * pinned to the bottom with margin-top: auto.
+   */
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-bottom: max(var(--space-lg), env(safe-area-inset-bottom, 0px));
+  }
+
+  .hero__content {
+    flex: 0 1 auto;
+    width: 100%;
+  }
+
   .hero__stats {
     margin-top: var(--space-xl);
   }
 
   .hero__scroll {
-    bottom: var(--space-md);
+    position: static;
+    left: auto;
+    transform: none;
+    align-self: center;
+    margin-top: auto;
+    padding-top: var(--space-2xl);
+    z-index: 2;
+  }
+
+  .hero__scroll-line {
+    height: 32px;
   }
 }
 
@@ -531,6 +559,12 @@ ul {
   flex: 0 0 clamp(240px, 72vw, 300px);
   scroll-snap-align: start;
   scroll-snap-stop: normal;
+}
+
+@media (max-width: 639px) {
+  .services__track .info-card {
+    flex: 0 0 clamp(200px, 62vw, 248px);
+  }
 }
 
 /* ===== About ===== */
