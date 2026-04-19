@@ -27,10 +27,7 @@
         <li><a href="#services" class="nav__link">Services</a></li>
         <li><a href="#process" class="nav__link">Process</a></li>
         <li><a href="#skills" class="nav__link">Skills</a></li>
-        <li><a href="#projects" class="nav__link">Projects</a></li>
-        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
-        <li><a href="#pricing" class="nav__link">Pricing</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li><a href="#availability" class="nav__link">Availability</a></li>
       </ul>
     </nav>
   </header>
@@ -43,8 +40,8 @@
         <h1 class="hero__title">I build fast websites that convert.</h1>
         <p class="hero__tagline">Landing pages, portfolios, and business websites — responsive, SEO-friendly, and easy to maintain.</p>
         <div class="hero__cta">
-          <a href="#contact" class="btn btn--primary">Start a project</a>
-          <a href="#projects" class="btn btn--outline">See case studies</a>
+          <a href="mailto:patil05rekha@gmail.com" class="btn btn--primary">Start a project</a>
+          <a href="#services" class="btn btn--outline">View services</a>
         </div>
         <div class="hero__stats" aria-label="Quick stats">
           <div class="stat">
@@ -72,9 +69,15 @@
         <h2 class="section__title">About me</h2>
         <div class="about__grid">
           <div class="about__image-wrap">
-            <div class="about__image-placeholder" role="img" aria-label="Profile">
-              <!-- Replace with <img src="your-photo.jpg" alt="Rekha Patil"> -->
-            </div>
+            <img
+              class="about__image"
+              src="assets/about-avatar.png"
+              alt="Anime-style illustrated portrait of a smart woman developer, representing Rekha Patil"
+              width="560"
+              height="560"
+              loading="lazy"
+              decoding="async"
+            >
           </div>
           <div class="about__text">
             <p class="about__lead">
@@ -83,7 +86,7 @@
             <p>
               I enjoy turning ideas into reality—whether that's a web app, a small tool, or an open-source project. When I'm not coding, I'm probably learning something new or exploring the outdoors.
             </p>
-            <a href="#contact" class="btn btn--primary">Let's talk</a>
+            <a href="mailto:patil05rekha@gmail.com" class="btn btn--primary">Let's talk</a>
           </div>
         </div>
       </div>
@@ -92,34 +95,101 @@
     <section class="section services" id="services">
       <div class="container">
         <h2 class="section__title">Services</h2>
-        <div class="cards__grid">
-          <article class="info-card">
-            <h3 class="info-card__title">Landing pages</h3>
-            <p class="info-card__desc">High-converting pages with strong structure, clear CTAs, and fast load times.</p>
-            <ul class="info-card__list">
-              <li>Modern responsive UI</li>
-              <li>Basic SEO + metadata</li>
-              <li>Deploy on GitHub Pages</li>
-            </ul>
-          </article>
-          <article class="info-card">
-            <h3 class="info-card__title">Business websites</h3>
-            <p class="info-card__desc">Multi-section websites that build trust and make it easy for customers to contact you.</p>
-            <ul class="info-card__list">
-              <li>Services + pricing layout</li>
-              <li>Contact form + lead capture</li>
-              <li>Performance optimization</li>
-            </ul>
-          </article>
-          <article class="info-card">
-            <h3 class="info-card__title">Fixes & improvements</h3>
-            <p class="info-card__desc">Tighten up your existing site: speed, mobile layout, UX, and small feature work.</p>
-            <ul class="info-card__list">
-              <li>Responsive bugs</li>
-              <li>SEO + accessibility</li>
-              <li>UI polish</li>
-            </ul>
-          </article>
+        <!-- <p class="services__scroll-hint" aria-hidden="true">Scroll sideways to explore</p> -->
+        <div class="services__carousel">
+          <button type="button" class="services__nav services__nav--prev" id="services-prev" aria-controls="services-scroller" aria-label="Previous service">
+            <svg class="services__nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="services__scroller-shell">
+            <div id="services-scroller" class="services__scroller" tabindex="0" role="region" aria-label="Services — use arrows to move between cards; list wraps from last to first">
+              <div class="services__track">
+                <article class="info-card">
+                  <h3 class="info-card__title">Landing pages</h3>
+                  <p class="info-card__desc">High-converting pages with strong structure, clear CTAs, and fast load times.</p>
+                  <ul class="info-card__list">
+                    <li>Modern responsive UI</li>
+                    <li>Basic SEO + metadata</li>
+                    <li>Deploy on GitHub Pages</li>
+                  </ul>
+                </article>
+                <article class="info-card">
+                  <h3 class="info-card__title">Business websites</h3>
+                  <p class="info-card__desc">Multi-section websites that build trust and make it easy for customers to contact you.</p>
+                  <ul class="info-card__list">
+                    <li>Services + pricing layout</li>
+                    <li>Contact form + lead capture</li>
+                    <li>Performance optimization</li>
+                  </ul>
+                </article>
+                <article class="info-card">
+                  <h3 class="info-card__title">Fixes & improvements</h3>
+                  <p class="info-card__desc">Tighten up your existing site: speed, mobile layout, UX, and small feature work.</p>
+                  <ul class="info-card__list">
+                    <li>Responsive bugs</li>
+                    <li>SEO + accessibility</li>
+                    <li>UI polish</li>
+                  </ul>
+                </article>
+                <article class="info-card">
+                  <h3 class="info-card__title">APIs & integrations</h3>
+                  <p class="info-card__desc">Connect CRMs, payments, and SaaS tools so teams stop retyping data between systems.</p>
+                  <ul class="info-card__list">
+                    <li>REST APIs & webhooks</li>
+                    <li>Third-party OAuth flows</li>
+                    <li>Reliable error handling & logging</li>
+                  </ul>
+                </article>
+                <article class="info-card">
+                  <h3 class="info-card__title">AI-assisted features</h3>
+                  <p class="info-card__desc">Practical AI layers—search, assistants, and workflow help—grounded in your content and policies.</p>
+                  <ul class="info-card__list">
+                    <li>In-app copilots & smart search</li>
+                    <li>Human-in-the-loop UX</li>
+                    <li>Privacy-conscious scope & prompts</li>
+                  </ul>
+                </article>
+                <article class="info-card">
+                  <h3 class="info-card__title">Cloud & CI/CD</h3>
+                  <p class="info-card__desc">Repeatable deploys and environments that work for a two-person startup or a growing engineering org.</p>
+                  <ul class="info-card__list">
+                    <li>GitHub Actions / pipelines</li>
+                    <li>Staging + production parity</li>
+                    <li>Container-friendly builds</li>
+                  </ul>
+                </article>
+                <article class="info-card">
+                  <h3 class="info-card__title">Analytics dashboards</h3>
+                  <p class="info-card__desc">Leadership-ready views on KPIs, funnels, and ops—without living inside spreadsheets.</p>
+                  <ul class="info-card__list">
+                    <li>Role-aware summaries</li>
+                    <li>Charts that stay fast at scale</li>
+                    <li>Export & audit-friendly views</li>
+                  </ul>
+                </article>
+                <article class="info-card">
+                  <h3 class="info-card__title">Security & access</h3>
+                  <p class="info-card__desc">Hardening for growth: auth, roles, and safer data handling before traffic and compliance pressure rise.</p>
+                  <ul class="info-card__list">
+                    <li>RBAC & session best practices</li>
+                    <li>OWASP-minded reviews</li>
+                    <li>GDPR-friendly patterns where needed</li>
+                  </ul>
+                </article>
+                <article class="info-card">
+                  <h3 class="info-card__title">Design systems</h3>
+                  <p class="info-card__desc">One source of truth for UI so product and marketing ship consistently across teams and brands.</p>
+                  <ul class="info-card__list">
+                    <li>Tokens, components & docs</li>
+                    <li>Accessible patterns by default</li>
+                    <li>Handoff that scales with headcount</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="services__nav services__nav--next" id="services-next" aria-controls="services-scroller" aria-label="Next service">
+            <svg class="services__nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -164,164 +234,25 @@
       <div class="container">
         <h2 class="section__title">Skills & tools</h2>
         <ul class="skills__list">
-          <li class="skills__item">HTML / CSS / JavaScript</li>
+          <li class="skills__item">HTML / CSS</li>
+          <li class="skills__item">JavaScript / TypeScript</li>
           <li class="skills__item">React</li>
+          <li class="skills__item">Angular</li>
           <li class="skills__item">Node.js</li>
+          <li class="skills__item">Python</li>
+          <li class="skills__item">Django</li>
           <li class="skills__item">Git & GitHub</li>
+          <li class="skills__item">UI / UX Design</li>
           <li class="skills__item">Responsive design</li>
-          <li class="skills__item">UI / UX basics</li>
         </ul>
       </div>
     </section>
 
-    <section class="section projects" id="projects">
+    <section class="section availability-section" id="availability" aria-label="Availability">
       <div class="container">
-        <h2 class="section__title">Case studies</h2>
-        <div class="projects__grid">
-          <article class="project-card">
-            <div class="project-card__thumb"></div>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Landing page redesign</h3>
-              <p class="project-card__desc">Improved layout and CTA clarity with a fast, responsive build.</p>
-              <div class="project-card__links">
-                <a href="#" class="project-card__link">Live</a>
-                <a href="#" class="project-card__link">Code</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card__thumb"></div>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Business website</h3>
-              <p class="project-card__desc">A clean multi-section site with pricing and lead capture.</p>
-              <div class="project-card__links">
-                <a href="#" class="project-card__link">Live</a>
-                <a href="#" class="project-card__link">Code</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-card__thumb"></div>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Performance cleanup</h3>
-              <p class="project-card__desc">Optimized assets and CSS for better speed and mobile experience.</p>
-              <div class="project-card__links">
-                <a href="#" class="project-card__link">Live</a>
-                <a href="#" class="project-card__link">Code</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section testimonials" id="testimonials">
-      <div class="container">
-        <h2 class="section__title">Testimonials</h2>
-        <div class="quotes">
-          <figure class="quote">
-            <blockquote class="quote__text">“Great communication and a polished result. The new page looks modern and loads fast on mobile.”</blockquote>
-            <figcaption class="quote__by">Client Name — Business Owner</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote class="quote__text">“Delivered quickly and handled feedback smoothly. Clean code and thoughtful UI.”</blockquote>
-            <figcaption class="quote__by">Client Name — Founder</figcaption>
-          </figure>
-        </div>
-        <!-- <p class="note">No testimonials yet? Replace these with short “results” notes (before/after metrics) or mini case studies.</p> -->
-      </div>
-    </section>
-
-    <section class="section pricing" id="pricing">
-      <div class="container">
-        <h2 class="section__title">Pricing</h2>
-        <p class="pricing__intro">Simple, transparent packages. Custom quotes available for larger scopes.</p>
-
-        <div class="pricing__grid">
-          <article class="pricing-card">
-            <div class="pricing-card__top">
-              <h3 class="pricing-card__title">Starter</h3>
-              <p class="pricing-card__price"><span class="pricing-card__currency">$</span>199</p>
-              <p class="pricing-card__subtitle">One-page landing</p>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Responsive layout</li>
-              <li>Basic SEO + metadata</li>
-              <li>Contact section</li>
-              <li>Delivery: 2–3 days</li>
-            </ul>
-            <a class="btn btn--outline pricing-card__cta" href="#contact">Choose Starter</a>
-          </article>
-
-          <article class="pricing-card pricing-card--featured">
-            <div class="pricing-card__badge" aria-hidden="true">Most popular</div>
-            <div class="pricing-card__top">
-              <h3 class="pricing-card__title">Professional</h3>
-              <p class="pricing-card__price"><span class="pricing-card__currency">$</span>499</p>
-              <p class="pricing-card__subtitle">Portfolio / business site</p>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Up to 5 sections</li>
-              <li>Polished UI + animations</li>
-              <li>Performance optimized</li>
-              <li>Delivery: 5–7 days</li>
-            </ul>
-            <a class="btn btn--primary pricing-card__cta" href="#contact">Choose Pro</a>
-          </article>
-
-          <article class="pricing-card">
-            <div class="pricing-card__top">
-              <h3 class="pricing-card__title">Premium</h3>
-              <p class="pricing-card__price"><span class="pricing-card__currency">$</span>999</p>
-              <p class="pricing-card__subtitle">Custom build</p>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Custom design system</li>
-              <li>Advanced interactions</li>
-              <li>Content + brand support</li>
-              <li>Delivery: 2–3 weeks</li>
-            </ul>
-            <a class="btn btn--outline pricing-card__cta" href="#contact">Choose Premium</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="container">
-        <h2 class="section__title">Get in touch</h2>
-        <p class="contact__intro">Tell me a bit about your project and I’ll reply with next steps and a quote.</p>
-
-        <div class="contact__grid">
-          <form class="contact-form" id="contact-form">
-            <div class="field">
-              <label class="field__label" for="name">Name</label>
-              <input class="field__input" id="name" name="name" type="text" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label class="field__label" for="email">Email</label>
-              <input class="field__input" id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label class="field__label" for="message">Project details</label>
-              <textarea class="field__input field__textarea" id="message" name="message" rows="5" placeholder="What do you need built? Timeline? Budget range?" required></textarea>
-            </div>
-            <button class="btn btn--primary contact-form__submit" type="submit">Send message</button>
-            <!-- <p class="contact-form__hint">This form opens your email app (no backend required).</p> -->
-          </form>
-
-          <div class="contact__side">
-            <div class="contact__links">
-              <a href="mailto:patil05rekha@gmail.com" class="contact__link">patil05rekha@gmail.com</a>
-              <a href="#" class="contact__link" target="_blank" rel="noopener noreferrer">Book a call (Calendly)</a>
-              <a href="https://github.com/rekha1525" class="contact__link" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://linkedin.com/in/rekha1525" class="contact__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
-            <div class="availability">
-              <div class="availability__dot" aria-hidden="true"></div>
-              <div class="availability__text"><strong>Availability:</strong> Taking 2 new projects this month</div>
-            </div>
-          </div>
+        <div class="availability">
+          <div class="availability__dot" aria-hidden="true"></div>
+          <div class="availability__text"><strong>Availability:</strong> Taking 2 new projects this month</div>
         </div>
       </div>
     </section>
