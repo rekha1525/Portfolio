@@ -529,10 +529,11 @@ ul {
   overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  scroll-padding-inline: var(--space-xs);
+  /* Enough inset so 1px card borders are not clipped at the scroll viewport edge */
+  scroll-padding-inline: var(--space-md);
   padding-top: var(--space-xs);
   padding-bottom: var(--space-md);
-  padding-inline: var(--space-xs);
+  padding-inline: var(--space-md);
   outline: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -552,13 +553,17 @@ ul {
   display: flex;
   gap: var(--space-xl);
   width: max-content;
-  padding-right: var(--space-xs);
+  padding-inline: var(--space-xs);
+  /* Wide end gutter so the right border of the last (or focused) card stays visible past overflow clipping */
+  padding-right: var(--space-2xl);
 }
 
 .services__track .info-card {
   flex: 0 0 clamp(240px, 72vw, 300px);
   scroll-snap-align: start;
   scroll-snap-stop: normal;
+  /* Keeps borders from disappearing at subpixel scroll / overflow seams (Safari, etc.) */
+  isolation: isolate;
 }
 
 @media (max-width: 639px) {
